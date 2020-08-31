@@ -1,0 +1,41 @@
+.body {
+  background-color: antiquewhite;
+}
+
+.navbar {
+  margin: 0px;
+  background-color: orangered;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+  margin-right: 40px;
+  font-size: 1.2em;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: orangered;
+}
+
+.active {
+  background-color: rgb(224, 39, 39);
+}
+
+/* h1 {
+  color: orangered;
+} */

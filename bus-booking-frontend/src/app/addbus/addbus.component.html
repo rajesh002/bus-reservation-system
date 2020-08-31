@@ -1,0 +1,39 @@
+<div class="sidenav">
+
+  <a style="margin-top: 90px;" routerLink="../addbus" class="nav-link" routerLinkActive="active">Add Buses</a>
+  <a routerLink="../addtimings" class="nav-link" routerLinkActive="active">Add Timings</a>
+  <a routerLink="../availablebuses" class="nav-link" routerLinkActive="active">Available Buses</a>
+</div>
+
+<div class="main">
+  <div [hidden]="submitted" style="width: 400px;" class="container">
+    <h2>Add Buses</h2>
+    <hr>
+    <form (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="name">Bus Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="bus.name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="from">From</label>
+        <input type="text" class="form-control" id="from" required [(ngModel)]="bus.from" name="from">
+      </div>
+
+      <div class="form-group">
+        <label for="to">To</label>
+        <input type="text" class="form-control" id="to" required [(ngModel)]="bus.to" name="to">
+      </div>
+
+      <br>
+      <button type="submit" class="registerbtn">Add Bus</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h4>Added Successfully</h4>
+    <a routerLink="../admin" class="nav-link" routerLinkActive="active">Back to dashboard</a>
+  </div>
+
+</div>

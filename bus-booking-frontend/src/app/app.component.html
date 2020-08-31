@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar">
+    <li class="nav-item">
+      <a routerLink="signup" class="nav-link" routerLinkActive="active">SignUp</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+    </li>
+
+    <h1 style="text-align: center; color: white;margin:0em; padding:10px;">{{title}}</h1>
+
+  </ul>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
