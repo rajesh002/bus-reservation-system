@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.springbt</groupId>
-    <artifactId>spa-management</artifactId>
+    <artifactId>Busresevation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spa-management</name>
-    <description>spa managemnet for hyd</description>
+    <name>Busresevation</name>
+    <description>Bus reservation system</description>
 
     <properties>
         <java.version>1.8</java.version>

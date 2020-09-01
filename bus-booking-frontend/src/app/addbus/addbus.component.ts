@@ -16,15 +16,15 @@ export class AddbusComponent implements OnInit {
 
   ngOnInit() {}
 
-  // newBus(): void {
-  //   this.submitted = false;
-  //   this.bus = new Bus();
-  // }
+  newBus(): void {
+    this.submitted = false;
+    this.bus = new Bus();
+  }
 
   save() {
     this.busService.createBus(this.bus).subscribe(
       (data) => {
-        console.log(this.bus.from, this.bus.name);
+        console.log(this.bus.busFrom, this.bus.name);
         console.log(data);
         this.bus = new Bus();
         this.gotoList();
@@ -39,6 +39,6 @@ export class AddbusComponent implements OnInit {
   }
 
   gotoList() {
-    this.router.navigate(['/buses']);
+    this.router.navigate(['/addbus']);
   }
 }

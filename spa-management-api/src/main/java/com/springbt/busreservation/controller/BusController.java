@@ -13,8 +13,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1/busreservation")
 public class BusController {
@@ -53,17 +53,17 @@ public class BusController {
     }
 
 
-//    @PutMapping("/buses/{id}")
-//    public ResponseEntity<Bus> updateBus(@PathVariable(value = "id") Long busId,
-//                                                   @Valid @RequestBody Bus busDetails) throws ResourceNotFoundException {
-//        Bus bus = busRepository.findById(busId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Bus not found for this id :: " + busId));
-//
-//        bus.setFrom(busDetails.getFrom());
-//        bus.setName(busDetails.getName());
-//        bus.setTo(busDetails.getTo());
-//
-//        final Bus updatedBus = busRepository.save(bus);
-//        return ResponseEntity.ok(updatedBus);
-//    }
+    @PutMapping("/buses/{id}")
+    public ResponseEntity<Bus> updateBus(@PathVariable(value = "id") Long busId,
+                                                   @Valid @RequestBody Bus busDetails) throws ResourceNotFoundException {
+        Bus bus = busRepository.findById(busId)
+                .orElseThrow(() -> new ResourceNotFoundException("Bus not found for this id :: " + busId));
+
+        bus.setBusFrom(busDetails.getBusFrom());
+        bus.setName(busDetails.getName());
+        bus.setBusTo(busDetails.getBusTo());
+
+        final Bus updatedBus = busRepository.save(bus);
+        return ResponseEntity.ok(updatedBus);
+    }
 }

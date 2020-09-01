@@ -1,1 +1,35 @@
-<p>availablebuses works!</p>
+<div class="sidenav">
+
+  <a style="margin-top: 90px;" routerLink="../addbus" class="nav-link" routerLinkActive="active">Add Buses</a>
+  <a routerLink="../addtimings" class="nav-link" routerLinkActive="active">Add Timings</a>
+  <a routerLink="../availablebuses" class="nav-link" routerLinkActive="active">Available Buses</a>
+</div>
+
+<div class="main">
+  <h2>Available Buses List</h2>
+  <hr>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bus of bus | async">
+          <td>{{bus.name}}</td>
+          <td>{{bus.busFrom}}</td>
+          <td>{{bus.busTo}}</td>
+          <td><button (click)="deleteBus(bus.id)" class="btn btn-danger">Remove</button>
+            <button (click)="updateBus(bus.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            <button (click)="busDetails(bus.id)" class="btn btn-info" style="margin-left: 10px">View Data</button>
+          </td>
+          <hr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

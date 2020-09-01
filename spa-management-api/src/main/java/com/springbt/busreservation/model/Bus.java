@@ -53,7 +53,7 @@ public class Bus {
 		this.busFrom = busFrom;
 	}
 	
-	@Column(name = "email_address", nullable = false)
+	@Column(name = "busTo", nullable = false)
 	public String getBusTo() {
 		return busTo;
 	}

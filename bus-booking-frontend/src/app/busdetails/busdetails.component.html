@@ -1,1 +1,27 @@
-<p>busdetails works!</p>
+<div class="sidenav">
+
+  <a style="margin-top: 90px;" routerLink="../addbus" class="nav-link" routerLinkActive="active">Add Buses</a>
+  <a routerLink="../addtimings" class="nav-link" routerLinkActive="active">Add Timings</a>
+  <a routerLink="../availablebuses" class="nav-link" routerLinkActive="active">Available Buses</a>
+</div>
+
+<div class="main">
+  <h2>Bus Details</h2>
+  <hr>
+  <div *ngIf="bus">
+    <div>
+      <label><b>Name: </b></label> {{bus.name}}
+    </div>
+    <div>
+      <label><b>From: </b></label> {{bus.busFrom}}
+    </div>
+    <div>
+      <label><b>To: </b></label> {{bus.busTo}}
+    </div>
+  </div>
+  <br>
+  <br>
+  <button (click)="list()" class="registerbtn">Back to Available buses</button><br>
+  <!-- <a routerLink="../admin" class="nav-link" routerLinkActive="active">Back to dashboard</a> -->
+
+</div>

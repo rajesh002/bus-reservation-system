@@ -6,11 +6,11 @@ import { Bus } from './../bus';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-availablebuses',
-  templateUrl: './availablebuses.component.html',
-  styleUrls: ['./availablebuses.component.css'],
+  selector: 'app-customerview',
+  templateUrl: './customerview.component.html',
+  styleUrls: ['./customerview.component.css'],
 })
-export class AvailablebusesComponent implements OnInit {
+export class CustomerviewComponent implements OnInit {
   bus: Observable<Bus[]>;
 
   constructor(private busService: BusService, private router: Router) {}
@@ -33,11 +33,11 @@ export class AvailablebusesComponent implements OnInit {
     );
   }
 
-  busDetails(id: number) {
-    this.router.navigate(['busdetails', id]);
-  }
+  // busDetails(id: number) {
+  //   this.router.navigate(['busdetails', id]);
+  // }
 
-  updateBus(id: number) {
-    this.router.navigate(['update', id]);
+  reservation(id: number) {
+    this.router.navigate(['reservation', id]);
   }
 }

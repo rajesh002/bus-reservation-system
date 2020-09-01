@@ -1,4 +1,4 @@
-package com.springbt.spamanagement.exception;
+package com.springbt.busreservation.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

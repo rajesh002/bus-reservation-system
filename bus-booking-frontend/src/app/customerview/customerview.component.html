@@ -1,0 +1,26 @@
+<div class="main">
+  <h2>Available Buses</h2>
+  <hr>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bus of bus | async">
+          <td>{{bus.name}}</td>
+          <td>{{bus.busFrom}}</td>
+          <td>{{bus.busTo}}</td>
+          <td><a routerLink="../reservation/{{bus.id}}" class="registerbtn" routerLinkActive="active">Book Now</a>
+          </td>
+          <hr>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

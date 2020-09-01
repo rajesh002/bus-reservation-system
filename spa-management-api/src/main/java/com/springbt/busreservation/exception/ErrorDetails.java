@@ -1,4 +1,4 @@
-package com.springbt.spamanagement.exception;
+package com.springbt.busreservation.exception;
 
 import java.util.Date;
 

@@ -2,14 +2,19 @@
 .container {
   padding: 16px;
   margin-left: 35%;
+  margin-right: 20px;
+  margin-top: 140px;
+  padding: 10px;
   align-items: center;
   margin-bottom: 80px;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
 
 /* Full-width input fields */
 input[type=text],
 input[type=password] {
-  width: 100%;
+  width: 70%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -25,27 +30,27 @@ input[type=password]:focus {
 
 /* Overwrite default styles of hr */
 hr {
-  border: 1px solid #f1f1f1;
+  border: 1px solid orangered;
   margin-bottom: 25px;
 }
 
 /* Set a style for the submit/register button */
 .registerbtn {
-  background-color: rgb(67, 38, 70);
+  background-color: orangered;
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 45%;
   opacity: 0.9;
-  margin-left: 20px;
-  font-size: medium;
+  margin-left: 90px;
+  font-size: 1.2em;
 }
 
 .registerbtn:hover {
   opacity: 1;
-  background-color: rgb(50, 30, 53);
+  background-color: rgb(224, 39, 39);
 }
 
 /* Add a blue text color to links */

@@ -7,7 +7,7 @@
 
 <div class="main">
   <div [hidden]="submitted" style="width: 400px;" class="container">
-    <h2>Add Buses</h2>
+    <h2>Update Bus</h2>
     <hr>
     <form (ngSubmit)="onSubmit()">
 
@@ -27,12 +27,12 @@
       </div>
 
       <br>
-      <button type="submit" class="registerbtn">Add Bus</button>
+      <button type="submit" class="registerbtn">Update</button>
     </form>
   </div>
 
   <div [hidden]="!submitted">
-    <h4>Added Successfully</h4>
+    <h4>Updated Successfully</h4>
     <a routerLink="../admin" class="nav-link" routerLinkActive="active">Back to dashboard</a>
   </div>
 

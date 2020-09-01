@@ -1,4 +1,4 @@
-package com.springbt.spamanagement.service;
+package com.springbt.busreservation.service;
 
 
 import com.springbt.busreservation.model.Customer;

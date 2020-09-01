@@ -1,1 +1,55 @@
-<p>reservation works!</p>
+<div [hidden]="submitted" style="width: 400px;" class="container">
+  <h2>Book your reservation</h2>
+  <hr>
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" class="form-control" id="fullName" required [(ngModel)]="reservation.fullName" name="fullName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">choose Date</label>
+      <input type="date" class="form-control" id="date" required [(ngModel)]="reservation.date" name="date">
+    </div>
+    <br>
+    <div class="select">
+      <label for="name">choose Time</label>
+      <select name="time" id="time" class="dropdown" required [(ngModel)]="reservation.timeId"
+        (ngModelChange)="fetchAvailableTimesForBus()">
+        <option class="dropdown-content">Choose a time</option>
+        <option *ngFor="let timing of availabletimes | async" value="{{timing.id}}">{{timing.time}}
+        </option>
+      </select>
+    </div>
+    <br>
+    <div class="select">
+      <label for="name">choose Gender</label>
+      <select name="gender" id="gender" class="dropdown" required [(ngModel)]="reservation.gender" name="gender">
+        <option class="dropdown-content">Choose a gender</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="reservation.email" name="emailId">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="name">Phone Number</label>
+      <input type="number" class="form-control" id="phoneNumber" required [(ngModel)]="reservation.phoneNumber"
+        name="phoneNumber">
+    </div>
+    <br>
+    <button type="submit" class="registerbtn">Book Now</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <!-- <h4>You can check your appointment in the status {{ booking.id}} </h4> -->
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+<a routerLink="../customerview" class="nav-link" routerLinkActive="active">Back to customerview</a>

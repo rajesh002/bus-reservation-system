@@ -1,4 +1,4 @@
-package com.springbt.spamanagement.security;
+package com.springbt.busreservation.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

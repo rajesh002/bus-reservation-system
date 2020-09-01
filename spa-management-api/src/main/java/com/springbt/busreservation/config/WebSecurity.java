@@ -1,8 +1,8 @@
-package com.springbt.spamanagement.config;
+package com.springbt.busreservation.config;
 
-import com.springbt.spamanagement.security.JWTAuthenticationFilter;
-import com.springbt.spamanagement.security.JWTAuthorizationFilter;
-import com.springbt.spamanagement.service.UserDetailServiceImpl;
+import com.springbt.busreservation.security.JWTAuthenticationFilter;
+import com.springbt.busreservation.security.JWTAuthorizationFilter;
+import com.springbt.busreservation.service.UserDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -76,7 +76,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**").allowedOrigins("http://localhost:4200")
+                registry.addMapping("/api/**").allowedOrigins("*")
                         .allowedMethods("*");
             }
         };
