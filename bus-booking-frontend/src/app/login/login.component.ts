@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/admin']);
           return;
         }
-        this.router.navigate(['/customerpage']);
+        this.router.navigate(['/customerview']);
       },
       (error) => {
         console.log(error);

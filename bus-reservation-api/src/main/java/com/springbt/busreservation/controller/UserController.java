@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import com.springbt.spamanagement.exception.ResourceNotFoundException;
+import com.springbt.busreservation.exception.ResourceNotFoundException;
 import com.springbt.busreservation.model.Customer;
 import com.springbt.busreservation.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;

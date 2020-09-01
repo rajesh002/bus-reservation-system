@@ -1,7 +1,7 @@
 package com.springbt.busreservation.controller;
 
 import antlr.ASTNULLType;
-import com.springbt.spamanagement.exception.ResourceNotFoundException;
+import com.springbt.busreservation.exception.ResourceNotFoundException;
 import com.springbt.busreservation.model.Bus;
 import com.springbt.busreservation.repository.BusRepository;
 import org.springframework.beans.factory.annotation.Autowired;

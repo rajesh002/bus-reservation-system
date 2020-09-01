@@ -4,29 +4,26 @@
   <a routerLink="../availablebuses" class="nav-link" routerLinkActive="active">Available Buses</a>
 </div>
 
+<div class="main">
+  <div [hidden]="submitted" style="width: 400px;" class="container">
+    <h2>Add timing</h2>
+    <hr>
+    <form (ngSubmit)="onSubmit()">
 
-<div [hidden]="submitted" style="width: 400px;" class="container">
-  <h2>Add timing</h2>
-  <hr>
-  <form (ngSubmit)="onSubmit()">
-
-    <!-- <div class="form-group">
-        <label for="name">Slot Name</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="slot.slotName" name="name">
-      </div> -->
-
-    <div class="form-group">
-      <label for="time"> Timing</label>
-      <input type="text" class="form-control" id="time" required [(ngModel)]="timing.timing" name="time">
-    </div>
+      <div class="form-group">
+        <label for="time"> Timing</label>
+        <input type="text" class="form-control" id="time" required [(ngModel)]="timing.timing" name="time">
+      </div>
 
 
-    <br>
-    <button type="submit" class="registerbtn">Add Timing</button>
-  </form>
-</div>
+      <br>
+      <button type="submit" class="registerbtn">Add Timing</button>
+    </form>
+  </div>
 
-<div [hidden]="!submitted">
-  <h4>Added Successfully</h4>
-  <a routerLink="../admin" class="nav-link" routerLinkActive="active">Back to dashboard</a>
+  <div [hidden]="!submitted">
+    <h4>Added Successfully</h4>
+    <a routerLink="../admin" class="nav-link" routerLinkActive="active">Back to dashboard</a>
+  </div>
+
 </div>

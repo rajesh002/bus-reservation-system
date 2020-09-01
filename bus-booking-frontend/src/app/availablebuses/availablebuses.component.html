@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="sidenav">
 
   <a style="margin-top: 90px;" routerLink="../addbus" class="nav-link" routerLinkActive="active">Add Buses</a>
@@ -9,7 +10,7 @@
   <h2>Available Buses List</h2>
   <hr>
   <div class="panel-body">
-    <table class="table table-striped">
+    <table class="w3-table-all w3-hoverable">
       <thead>
         <tr>
           <th>Name</th>
@@ -23,9 +24,9 @@
           <td>{{bus.name}}</td>
           <td>{{bus.busFrom}}</td>
           <td>{{bus.busTo}}</td>
-          <td><button (click)="deleteBus(bus.id)" class="btn btn-danger">Remove</button>
-            <button (click)="updateBus(bus.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
-            <button (click)="busDetails(bus.id)" class="btn btn-info" style="margin-left: 10px">View Data</button>
+          <td><button (click)="deleteBus(bus.id)" class="btn-info">Remove</button>
+            <button (click)="updateBus(bus.id)" class="btn-info" style="margin-left: 10px">Update</button>
+            <button (click)="busDetails(bus.id)" class="btn-info" style="margin-left: 10px">View Data</button>
           </td>
           <hr>
         </tr>

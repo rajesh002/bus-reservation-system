@@ -71,6 +71,10 @@ hr {
   margin-bottom: 25px;
 }
 
+.btn-info {
+  font-size: medium;
+}
+
 /* Set a style for the submit/register button */
 .registerbtn {
   background-color: orangered;
